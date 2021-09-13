@@ -12,41 +12,46 @@
     h2, h3 {
         background-color: $brown1;
     }
+    // Bonus 1
+    h1:hover {
+        @extend %center;
+        text-decoration: underline
+    }
 }
 
 // 8
 .minor {
     background-color: silver;
-    // 12
-    @extend %center;
     // 9
     h1 {
         text-decoration: underline;
+        // 12
+        @extend %center;
+
+        // Bonus 2
+        margin-bottom: 25px * 4;
+
     }
     // 10
     h2 {
         text-decoration: line-through;
-    }
-}
-
-// Bonus 1
-.main {
-    h1:hover {
+        // 12
         @extend %center;
     }
 }
 
+
 // Bonus 3
 .main {
-    @include flex (center);
+    @include flex (space-between, center);
     h1 {
-        @include flex (flex-start);
+        @include flex (flex-start, flex-start);
     }
     h2 {
-        @include flex (flex-center);
+        @include flex (space-between, center);
     }
-    h3 {
-        @include flex (flex-end)
+    h4 {
+        display: none;
     }
 }
 
